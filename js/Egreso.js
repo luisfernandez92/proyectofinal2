@@ -3,10 +3,15 @@ class Egreso extends Dato {
 
     constructor(descripcion, valor){
         super(descripcion, valor);
-        this._id = ++this.contadorEgresos;
+        this._id = Egreso.incrementarId();
+        // console.log(this._id);
     }
 
-    get id(){
+    static incrementarId(){
+        return this.contadorEgresos++;
+    }
+
+    get id() {
         return this._id;
     }
 }

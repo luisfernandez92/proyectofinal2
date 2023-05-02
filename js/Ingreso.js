@@ -3,7 +3,11 @@ class Ingreso extends Dato {
 
     constructor(descripcion, valor){
         super(descripcion, valor);
-        this._id = ++this.contadorIngresos;
+        this._id = Ingreso.incrementarId();
+    }
+
+    static incrementarId(){
+        return this.contadorIngresos++;
     }
 
     get id() {

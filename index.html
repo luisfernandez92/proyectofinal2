@@ -11,25 +11,25 @@
     <div class="cabecero">
         <div class="presupuesto">
             <div class="presupuesto_titulo">Presupuesto Disponible</div>
-            <div class="presupuesto_valor">+2,000.00</div>
+            <div class="presupuesto_valor" id="presupuesto">+2,000.00</div>
             <div class="presupuesto_ingreso limpiarEstilos">
                 <div class="presupuesto_ingreso--texto">Ingresos</div>
                 <div class="derecha">
-                    <div class="presupuesto_ingreso--valor">+4,000.00</div>
+                    <div class="presupuesto_ingreso--valor" id="ingresos">+4,000.00</div>
                     <div class="presupuesto_ingreso--porcentaje"> </div>
                 </div>
             </div>
             <div class="presupuesto_egreso limpiarEstilos">
                 <div class="presupuesto_egreso--texto">Egresos</div>
                 <div class="derecha">
-                    <div class="presupuesto_egreso--valor">-1,900.00</div>
-                    <div class="presupuesto_egreso--porcentaje">45%</div>
+                    <div class="presupuesto_egreso--valor" id="egresos">-1,900.00</div>
+                    <div class="presupuesto_egreso--porcentaje" id="porcentaje">45%</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <form action="" id="forma">
+    <form action="#" id="forma" onsubmit="return false;">
         <div class="agregar">
             <div class="agregar_contenedor">
                 <select name="tipos" id="tipo" class="agregar_tipo">
@@ -38,7 +38,7 @@
                 </select>
                 <input type="text" name="descripcion" id="descripcion" class="agregar_descripcion" placeholder="Agregar Descripción">
                 <input type="number" name="valor" id="valor" class="agregar_valor" value="0" step="any">
-                <button class="agregar_btn"><ion-icon name="checkmark-circle-outline"></ion-icon></i></button>
+                <button class="agregar_btn" onclick="agregarDato();"><ion-icon name="checkmark-circle-outline"></ion-icon></i></button>
             </div>
         </div>
     </form>
@@ -48,7 +48,7 @@
             <h2 class="ingreso_titulo">Ingresos</h2>
             <div id="lista-ingresos">
                 <div class="elemento limpiarEstilos">
-                    <div class="elemento_descripcion">salario</div>
+                    <div class="elemento_descripcion">Salario</div>
                     <div class="derecha limpiarEstilos">
                         <div class="elemento_valor">+2,200.00</div>
                         <div class="elemento_eliminar">
@@ -70,7 +70,7 @@
 
         <div class="egreso">
             <h2 class="egreso_titulo">Egresos</h2>
-            <div class="lista-egresos">
+            <div id="lista-egresos">
                 <div class="elemento limpiarEstilos">
                     <div class="elemento_descripcion">Renta departamento</div>
                     <div class="derecha limpiarEstilos">
