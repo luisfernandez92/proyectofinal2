@@ -146,6 +146,8 @@ const agregarDato = () => {
     let tipo = forma['tipo'].value;
     let descripcion = forma['descripcion'].value;
     let valor = forma['valor'].value;
+    let primeraVez = false;
+    let presupuesto = totalIngresos() - totalEgresos();
 
     if (descripcion != '' && (valor != '' && valor != 0)) {
         if (tipo == 'ingreso') {
@@ -158,9 +160,8 @@ const agregarDato = () => {
             cargarCabecero();
             cargarEgresos();
             LimpiarCampos();
-        }
+        }  
     }
-
 }
 
 
